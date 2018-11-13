@@ -92,7 +92,7 @@ function registrar($login, $senha, $email){
 	$login = clear($login, $conexao);
 	$senha = clear($senha, $conexao);
 	$email = clear($email, $conexao);
-	$sql = "INSERT INTO usuario VALUES (NULL, '$login', '$email', '$senha', 1)";
+	$sql = "INSERT INTO usuario VALUES (NULL, '$login', '$senha', '$email', 1)";
 	$resultado = mysqli_query($conexao, $sql);
 	if (mysqli_affected_rows($conexao) >= 1) {
 		header("location: login.php?id=7");
