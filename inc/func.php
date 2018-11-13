@@ -102,7 +102,7 @@ function registrar($login, $senha, $email){
 function listarUsuario($id){
 	$conexao = conectarBanco();
 	$sql = "SELECT * FROM usuario where id = $id";
-	$arr = listar($sql);
+	$arr = pegarConteudo($sql);
 	return $arr;
 }
 function deslogar(){
