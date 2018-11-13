@@ -19,7 +19,7 @@ if (!isset($_SESSION['logado'])) {
 			<?php if ($_GET['id'] == 8){?>
 			<label for="Email">Email</label>
 			<input class="form-control" type="email" name="Email" id="Email">
-			<strong>Ou se já tiver conta <a class="nav-link" href="login.php?id=7">Logue aqui</a></strong>
+			<strong>Ou se já tiver conta <a href="login.php?id=7">Logue aqui</a></strong>
 		<?php } ?>
 			<input class="btn btn-primary mt-2" type="submit" name="btn-<?=$i['nome']?>" value="<?=$i['nome']?>">
 		</form>
