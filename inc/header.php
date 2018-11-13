@@ -22,6 +22,7 @@
             <div class="col-sm-8 col-md-4 py-4">
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
+              <p class="text-white">Você pode <?php ?><a href="adicionar.php">Adicionar</a>, editar e excluir imagens se você estiver logado.</p>
               <h4 class="text-white">Sistema de Login</h4>
               <ul class="list-unstyled">
                 <?php if (!isset($_SESSION['logado'])) { ?>
@@ -40,6 +41,9 @@
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
+            <?php if (isset($_SESSION['login'])) { ?>
+            <strong>Usuário: <?= $_SESSION['login'] ?></strong>
+          <?php } ?>
             <a href="index.php"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
             <strong>Home</strong></a>
           </a>
