@@ -9,7 +9,7 @@ function clear($var, $conexao){
 	return $var;
 }
 function conectarBanco() {
-	$servername = "thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	";
+	$servername = "thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
 	$username = "x3hvd02j9ejm0uz6";
 	$senha = "qcl9z6sww4nbsly2";
 	$dbname = "s0vt59oowb6bc5r4";
