@@ -8,7 +8,8 @@
 ?>
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Álbuns:</h1>
+          
+          <h1 class="jumbotron-heading mt-3">Álbuns:</h1>
           <p>
             <?php 
             $categoria = listarCategoria(true);
