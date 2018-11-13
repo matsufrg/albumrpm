@@ -82,8 +82,10 @@ function logar($login, $senha){
 	if (mysqli_affected_rows($conexao) >= 1) {
 		$_SESSION['logado'] = true;
 		$_SESSION['id'] = $linha['id'];
-		header("location: index.php");
-		exit();
+		$_SESSION['login'] = $login;
+		echo "<script>alert('Logando..'); window.location='index.php';</script>";
+	} else {
+		echo "<script>alert('Erro ao logar')</script>";
 	}
 
 }
@@ -96,6 +98,8 @@ function registrar($login, $senha, $email){
 	$resultado = mysqli_query($conexao, $sql);
 	if (mysqli_affected_rows($conexao) >= 1) {
 		echo "<script>alert('Você foi registrado com sucesso!')</script>";
+} else {
+	echo "<script>alert('Erro ao cadastrar')</script>";
 }
 }
 function listarUsuario($id){
@@ -105,11 +109,9 @@ function listarUsuario($id){
 	return $arr;
 }
 function deslogar(){
-	session_start();
 	session_unset();
 	session_destroy();
-	header("location: index.php");
-	exit();
+	header('location: index.php');
 }
 function adicionarImagem($resumo, $titulo, $arquivo, $descricao){
 	$conexao = conectarBanco();
