@@ -43,7 +43,7 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="detalhes.php?id=<?=$i['id']?>" type="button" class="btn btn-sm btn-outline-secondary">Ver detalhes</a>
-                      <?php if (isset($_SESSION['logado'])) { ?>
+                      <?php if (isset($_SESSION['logado']) && $i['id'] >= 4) { ?>
                       <a href="editar.php?id=<?=$i['id']?>" type="button" class="btn btn-sm btn-outline-secondary">Editar</a>
                       <a href="index.php?excluir=<?=$i['id']?>" type="button" class="btn btn-sm btn-outline-secondary">Excluir</a>
                     <?php } ?>
