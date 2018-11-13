@@ -95,8 +95,7 @@ function registrar($login, $senha, $email){
 	$sql = "INSERT INTO usuario VALUES (NULL, '$login', '$senha', '$email', 1)";
 	$resultado = mysqli_query($conexao, $sql);
 	if (mysqli_affected_rows($conexao) >= 1) {
-		header("location: login.php?id=7");
-		exit();
+		echo "<script>alert('Você foi registrado com sucesso!')</script>";
 }
 }
 function listarUsuario($id){
